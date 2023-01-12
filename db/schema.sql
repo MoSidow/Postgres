@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS postGres_db;
+CREATE DATABASE postGres_db;
