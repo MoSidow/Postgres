@@ -11,11 +11,11 @@
     <form>
       <div >
         <label>Product Name:</label>
-        <input type="text" id="project-name" name="project-name" />
+        <input type="text" />
       </div>
       <div>
-        <label for="product-cost">Price ($)!:</label>
-        <input class="form-input" type="number" id="project-cost" name="project-cost" />
+        <label for="product-cost">Price (£)!:</label>
+        <input class="form-input" type="number"/>
       </div>
       <div>
         <label for="product-desc">description:</label>
@@ -34,7 +34,7 @@
     {{#each products as |product|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/product/{{product.id}}">{{product.productName}}</a></h4>
+        <h4><a href="/product/{{product.id}}">{{product.name}}</a></h4>
       </div>
       <div class="col-md-4">
         <button data-id="{{product.id}}">DELETE</button>
