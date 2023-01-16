@@ -4,8 +4,9 @@
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
-      <a href="/project/{{product.id}}">{{product.productName}}</a>
+      <a href="/project/{{product.id}}">{{product.name}}</a>
     </h2>
+    <img src={{product.image}}></img>
     <p>
       <span for="img" aria-label="money">💲</span>
       <!-- Pass needed_funding value to the helper function -->
