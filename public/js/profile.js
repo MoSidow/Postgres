@@ -9,7 +9,7 @@ const newFormHandler = async (event) => {
     if (productName && productPrice && description && image) {
       const response = await fetch(`/api/products`, {
         method: 'POST',
-        body: JSON.stringify({ productName, productPrice, description, image }),
+        body: JSON.stringify({ name: productName, price: productPrice, description: description, image: image }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -17,6 +17,7 @@ const newFormHandler = async (event) => {
   
       if (response.ok) {
         document.location.replace('/profile');
+      
       } else {
         alert('Failed to create product');
       }
