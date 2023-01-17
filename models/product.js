@@ -21,6 +21,9 @@ Product.init(
     description: {
       type: DataTypes.TEXT,
     },
+    category: {
+      type: DataTypes.STRING,
+    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -39,11 +42,34 @@ Product.init(
     },
   },
   {
+    hooks: {
+      beforeCreate: async (newProductData) => {
+        if (newProductData.image) {
+          return newProductData.image
+        } else {
+      switch(newProductData.category) {
+        case "ring":
+          newProductData.image = "https://via.placeholder.com/150/000000/FFFFFF/?text=RING"
+          break;
+        case "necklace":
+          newProductData.image = "https://via.placeholder.com/150/000000/FFFFFF/?text=NECKLACE"
+          break;
+        case "bracelet":
+          newProductData.image = "https://via.placeholder.com/150/000000/FFFFFF/?text=BRACELET"
+          break;
+        case "earring":
+          newProductData.image = "https://via.placeholder.com/150/000000/FFFFFF/?text=EARRING"
+          break;
+        default:
+          console.log ("no placeholder")
+        }
+      }},
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'product',
+    modelName: 'Product',
   }
 );
 
