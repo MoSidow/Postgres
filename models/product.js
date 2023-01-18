@@ -21,8 +21,12 @@ Product.init(
     description: {
       type: DataTypes.TEXT,
     },
-    category: {
-      type: DataTypes.STRING,
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'category',
+        key: 'id',
+      },
     },
     date_created: {
       type: DataTypes.DATE,

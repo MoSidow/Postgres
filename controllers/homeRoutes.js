@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Product, User } = require('../models');
+const { Product, User, Category } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -77,6 +77,24 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+// Collects the category for the jewellery products
+router.get('/category/:id', async (req, res) => {
+  try {
+    const categoryData = await Category.findByPk(req.params.id, {
+      include: [{ model: Category }, { model: Product }],
+    });
+
+    const post = categoryData.get({ plain: true });
+
+    res.render('post', {
+      ...post,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
