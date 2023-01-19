@@ -14,11 +14,11 @@
         <input type="text" id="product-name"/>
       </div>
       <div>
-        <label for="product-image">Image:</label>
+        <label for="product-image">Image Url:</label>
         <input type="text" id="product-image"/>
       </div>
       <div>
-        <label for="product-price">Price (£)!:</label>
+        <label for="product-price">Price (£):</label>
         <input class="form-input" type="number" id="product-price"/>
       </div>
       <div>
@@ -33,7 +33,7 @@
 
   {{#if Products.length}}
   <div class="col-md-6 jewellery-list">
-    <h3>Current Products:</h3>
+    <h3>Your Products:</h3>
 
     {{#each Products as |product|}}
     <div class="row mb-2">

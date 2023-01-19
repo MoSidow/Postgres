@@ -7,9 +7,7 @@
     </h2>
     <img src={{product.image}}></img>
     <p>
-      <span for="img" aria-label="money">£</span>
-      
-      <span class="dollar-amount">{{format_amount product.price}}</span>
+      <span class="dollar-amount">£{{format_amount product.price}}</span>
     </p>
     <p>Created by {{product.user.name}} on {{format_date product.date_created}}</p>
   </div>
