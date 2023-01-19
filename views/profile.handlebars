@@ -31,11 +31,11 @@
     </form>
   </div>
 
-  {{#if products.length}}
+  {{#if Products.length}}
   <div class="col-md-6 jewellery-list">
     <h3>Current Products:</h3>
 
-    {{#each products as |product|}}
+    {{#each Products as |product|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/product/{{product.id}}">{{product.name}}</a></h4>
