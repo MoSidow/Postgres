@@ -13,14 +13,18 @@
   <div class="col-md-6">
     <h3>Create a New Product:</h3>
 
-    <form>
+    <form class="new-jewellery-form">
       <div >
         <label>Product Name:</label>
-        <input type="text" />
+        <input type="text" id="product-name"/>
       </div>
       <div>
-        <label for="product-cost">Price (£)!:</label>
-        <input class="form-input" type="number"/>
+        <label for="product-image">Image:</label>
+        <input type="text" id="product-image"/>
+      </div>
+      <div>
+        <label for="product-price">Price (£)!:</label>
+        <input class="form-input" type="number" id="product-price"/>
       </div>
       <div>
         <label for="product-desc">description:</label>
@@ -32,11 +36,11 @@
     </form>
   </div>
 
-  {{#if product.length}}
-  <div class="col-md-6">
+  {{#if Products.length}}
+  <div class="col-md-6 jewellery-list">
     <h3>Current Products:</h3>
 
-    {{#each products as |product|}}
+    {{#each Products as |product|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/product/{{product.id}}">{{product.name}}</a></h4>

@@ -4,11 +4,12 @@ const newFormHandler = async (event) => {
     const productName = document.querySelector('#product-name').value.trim();
     const productPrice = document.querySelector('#product-price').value.trim();
     const description = document.querySelector('#product-desc').value.trim();
-  
-    if (productName && productPrice && description) {
+    const image  = document.querySelector('#product-image').value.trim();
+
+    if (productName && productPrice && description && image) {
       const response = await fetch(`/api/products`, {
         method: 'POST',
-        body: JSON.stringify({ productName, productPrice, description }),
+        body: JSON.stringify({ name: productName, price: productPrice, description: description, image: image }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -16,6 +17,7 @@ const newFormHandler = async (event) => {
   
       if (response.ok) {
         document.location.replace('/profile');
+      
       } else {
         alert('Failed to create product');
       }
