@@ -1,5 +1,5 @@
 {{#each products as |product|}}
-<div class="row mb-4 project">
+<div class="row mb-4 product">
   <div class="col-md-5">
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
@@ -7,7 +7,6 @@
     </h2>
     <img src={{product.image}}></img>
     <p>
-      
       <span class="dollar-amount">£{{format_amount product.price}}</span>
     </p>
     <p>Created by {{product.user.name}} on {{format_date product.date_created}}</p>
