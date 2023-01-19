@@ -7,18 +7,30 @@
     --border-radius: 0.3rem;
   }
   
+  * {
+
+  }
+
+  .form {
+    background-color: var(--violet);
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+  }
+
   body {
     font-family: '';
-    margin: 0;
+    margin: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: var(--quatrinary);
+    background-color: var(--dark);
   }
   
   a {
-    color: var(--dark);
+    color: var(--gold);
     text-decoration: none;
   }
   
@@ -28,17 +40,38 @@
   
   header {
     padding: 40px;
+    width: 100vw;
     text-align: center;
-    background: var(--primary);
-    color: var(--light);
   }
+
+  #header-banner {
+    display: flex;
+    background-color: var(--violet);
+    width: 100vw;
+    height: 20vh;
+  }
+
+  #header-banner a {
+    color: var(--light);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  #header-banner a:hover {
+    color: var(--secondary);
+    background-color: var(--dark);
+  }
+
   
   main {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
+    justify-content: center;
+    height: 100vh;
   }
-  
+
   aside {
     flex: 0;
     background-color: var(--tertiary);
@@ -47,21 +80,9 @@
     color: var(--light);
   }
   
-  nav {
-    display: flex;
-    background-color: var(--secondary);
-  }
-  
-  nav a {
-    color: var(--light);
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  nav a:hover {
-    color: var(--secondary);
-    background-color: var(--dark);
+  .box-width {
+    width: 85vw;
+    margin-top: 5%;
   }
   
   .gallery {
@@ -72,6 +93,10 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+  }
+
+  .product {
+    background-color: #577a7c;
   }
   
   .btn-no-style {
@@ -86,7 +111,7 @@
   }
   
   img {
-    max-width: 100%;
+    max-width: 20%;
     height: auto;
   }
   
