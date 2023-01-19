@@ -16,6 +16,14 @@ Review.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        comment: {
+            type: DataTypes.TEXT,
+            allowNull: true,
+        },
+        rating: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        }
     },
     {
         sequelize,
