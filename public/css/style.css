@@ -6,10 +6,6 @@
     --error: #bb4644;
     --border-radius: 0.3rem;
   }
-  
-  * {
-
-  }
 
   .form {
     background-color: var(--violet);
