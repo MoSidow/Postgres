@@ -8,17 +8,22 @@
   }
   
   body {
-    font-family: '';
+    font-family: 'Kumbh Sans';
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: var(--quatrinary);
+    background-color: var(--light);
   }
   
+  .logo {
+    display: flex;
+    justify-content: center;
+    color: var(--dark)
+  }
   a {
-    color: var(--dark);
+    color: var(--gold);
     text-decoration: none;
   }
   
