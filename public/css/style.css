@@ -41,12 +41,23 @@
     font-size: 20px;
 }
 
+a {
+  text-decoration: none;
+  color:var(--dark);
+}
+
+a:hover {
+  text-decoration: none;
+  color:var(--dark);
+}
+
   nav {
     display: flex;
     flex-direction: row;
     margin:auto;
     justify-content: center;
     background-color: var(--light);
+    text-decoration: none;
   }
 
   nav a {
@@ -74,6 +85,10 @@
     height: 180px;
   }
 
+  .product {
+    margin-left:40px;
+    margin-right:40px;
+  }
   .product-image {
     width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
