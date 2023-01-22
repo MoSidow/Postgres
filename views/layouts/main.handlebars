@@ -14,7 +14,9 @@
     <header class="header">
         <div class="logo"><a id="homepage" href="/">PLATINUM</a></div>
         <h2 class="logo-2">PRE-LOVED</h2>
+                    <p class="tagline">Sell your pre-loved Jewellery Online!</p>
     </header>
+    <hr class="solid">
         <nav>
                 {{#if logged_in}}
 
@@ -25,17 +27,18 @@
 
                 {{else}}
 
-                <a href="/login">Log In</a>
+                <a class="login" href="/login">Log In</a>
 
                 {{/if}}
+
+                                <a class="welcome" href="/">Welcome!</a>
             </nav>
-                <a href="/">Welcome!</a>
     
     <div class="hero-image">
     </div>
     
-
         <main>
+            <h3 class="heading">Discover Amazing Jewllery for Less!</h3>
             {{{ body }}}
         </main>
 
