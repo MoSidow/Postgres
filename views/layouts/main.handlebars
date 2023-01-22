@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platinum Preloved</title>
-    <link rel="stylesheet" href="/css/jass.css">
-    <link rel="stylesheet" href="/css/style.css">
-          <!-- Google Fonts Links -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Platinum Pre Loved</title>
+    <link rel="stylesheet" type="text/css" href="/css/jass.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="flex-column justify-space-around">
 
-        <header class="display-flex justify-space-between align-center p-2" id="header-banner">
-
-            <h1>
-                <a href="/">Welcome!</a>
-            </h1>
-
-            <nav>
+<body class="body">
+    <header class="header">
+        <div class="logo"><a id="homepage" href="/">PLATINUM</a></div>
+        <h2 class="logo-2">PRE-LOVED</h2>
+                    <p class="tagline">Sell your pre-loved Jewellery Online!</p>
+    </header>
+    <hr class="solid">
+        <nav>
                 {{#if logged_in}}
 
                 <a href="/profile">Your Profile</a>
@@ -28,20 +25,25 @@
 
                 {{else}}
 
-                <a href="/login">Log In</a>
+                <a class="login" href="/login">Log In</a>
 
                 {{/if}}
-            </nav>
 
-        </header>
+                                <a class="welcome" href="/">Welcome {{name}}!</a>
+            </nav>
+    
+    <div class="hero-image">
+    </div>
+    
         <main>
+            <h3 class="heading">Discover Amazing Jewellery for Less!</h3>
+            <p class="subheading">Browse the Ad's posted by sellers below to find stunning pices to fit your budget...</p>
             {{{ body }}}
         </main>
 
         <footer>
 
         </footer>
-    </div>
 
     
     {{#if logged_in}}
