@@ -1,0 +1,42 @@
+[
+    {
+        "name":"Jason",
+        "comment":"Fantastic seller, got my son a watch for his graduation and quality and condition was perfect!",
+        "rating":"5"
+    },
+    {
+        "name":"Sarah",
+        "comment":"Bougt a pair of earrings for a wedding, looked perfect with my outfit! Delivery was quick.",
+        "rating":"5"
+    },
+    {
+        "name":"Ahmed",
+        "comment":"Delivery took a while but the seller responds quickly",
+        "rating":"4"
+    },
+    {
+        "name":"Oskar",
+        "comment":"Bought a ring to propose to my girlfriend, she said no.",
+        "rating":"1"
+    },
+    {
+        "name":"Jordan",
+        "comment":"Great communication, reasonable price for good quality products",
+        "rating":"5"
+    },
+    {
+        "name":"Chris",
+        "comment":"Wife loved the necklace I got for her anniversary, quick delivery",
+        "rating":"5"
+    },
+    {
+        "name":"Adiba",
+        "comment":"Lovely seller, bought a bracelet that was in perfect condition",
+        "rating":"5"
+    },
+    {
+        "name":"Charlotte",
+        "comment":"Slow delivery, seller responds after 2 days, but item was beautiful and in great condition",
+        "rating":"3"
+    }
+]

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Product, User, Category } = require('../models');
+const { Product, User, Category, Review } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -26,6 +26,28 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/review', async(req,res) => {
+  try{
+    const reviewData = await Review.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name']
+        }
+      ]
+    })
+
+    const review = reviewData.map((review) => review.get({ plain: true }));
+
+    res.render('review', {
+      review,
+      logged_in: req.session.logged_in
+    })
+  } catch(err){
+    res.status(500).json(err)
+  }
+})
 
 router.get('/product/:id', async (req, res) => {
   try {
@@ -86,14 +108,36 @@ router.get('/category/:id', async (req, res) => {
       include: [{ model: Category }, { model: Product }],
     });
 
-    const post = categoryData.get({ plain: true });
+    const category = categoryData.get({ plain: true });
 
     res.render('post', {
-      ...post,
+      ...category,
       logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
+  }
+});
+
+router.get('/review/:id', async(req, res) => {
+  try{
+    const reviewData = await Review.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name']
+        }
+      ],
+    })
+
+    const review = reviewData.get({plain: true});
+
+    res.render('review', {
+      ...review,
+      logged_in: res.session.logged_in
+    })
+  } catch (err) {
+    res.status(500).json(err)
   }
 });
 

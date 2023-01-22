@@ -1,6 +1,39 @@
 <div>
-    <h2>{{product.name}}</h2>
-    <label>Product Review</label>
-    <textarea></textarea>
-    <button>Submit Review!</button>
+    <h1>Make a Review: </h1>
+
+    <form class="new-review-form">
+        <div>
+            <label>{{user.name}}</label>
+            <input type="text" id="review-name"/>
+        </div>
+
+        <div>
+            <label for="review-rating">Rating</label>
+            <input type="form-input" type="number" id="review-rating"/>
+        </div>
+
+        <div>
+            <label for="review-comment">Comment about the product</label>
+            <input id="review-comment" name="review-comment"/>
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    {{#if Reviews.length}}
+    <div>
+        <h3>Recent Review</h3>
+
+        {{#each Reviews as |review|}}
+        <div>
+            <h2><a href="/review/{{review.id}}">{{review.name}}</a></h2>
+        </div>
+
+        {{/each}}
+    </div>
+    {{/if}}
 </div>
+
+<script src="./js/review.js"></script>
