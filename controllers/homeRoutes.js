@@ -27,6 +27,28 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/review', async(req,res) => {
+  try{
+    const reviewData = await Review.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name']
+        }
+      ]
+    })
+
+    const review = reviewData.map((review) => review.get({ plain: true }));
+
+    res.render('review', {
+      review,
+      logged_in: req.session.logged_in
+    })
+  } catch(err){
+    res.status(500).json(err)
+  }
+})
+
 router.get('/product/:id', async (req, res) => {
   try {
     const productData = await Product.findByPk(req.params.id, {
@@ -97,15 +119,20 @@ router.get('/category/:id', async (req, res) => {
   }
 });
 
-router.get('/review', async(req, res) => {
+router.get('/review/:id', async(req, res) => {
   try{
     const reviewData = await Review.findByPk(req.params.id, {
-      include: [{model: Review}, {model: Product}],
+      include: [
+        {
+          model: User,
+          attributes: ['name']
+        }
+      ],
     })
 
     const review = reviewData.get({plain: true});
 
-    res.render('post', {
+    res.render('review', {
       ...review,
       logged_in: res.session.logged_in
     })

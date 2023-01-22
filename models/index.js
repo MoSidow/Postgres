@@ -8,6 +8,11 @@ User.hasMany(Product, {
   onDelete: 'CASCADE'
 });
 
+User.hasMany(Review, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+})
+
 Product.belongsTo(User, {
   foreignKey: 'user_id'
 });
@@ -21,9 +26,8 @@ Category.hasMany(Product, {
   onDelete: 'CASCADE'
 })
 
-Product.hasMany(Review, {
-  foreignKey: 'product_id',
-  onDelete: 'CASCADE'
+Review.belongsTo(User, {
+  foreignKey: 'user_id'
 })
 
 
