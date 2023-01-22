@@ -1,3 +1,4 @@
+/* Root Variables to change golobal themes */ 
 :root {
     --dark: #545454;
     --gold: #A2825A;
@@ -13,12 +14,13 @@
     font-family: var(--body-font);
     color: var(--dark);
   }
-
+/* Header Styling */ 
 .header {
   display: flex;
   flex-direction: column;
 }
 
+/* Logo Styling */ 
 .logo {
     display: flex;
     flex-direction: column;
@@ -67,6 +69,7 @@ a:hover {
   color:var(--dark);
 }
 
+/* Navbar Styling */ 
   nav {
     display: flex;
     flex-direction: row;
@@ -101,6 +104,7 @@ a:hover {
     margin-top: 20px
   }
 
+  /* Hero Section Styling */ 
   .hero-image {
     background-image: url("../assets/images/heroimage.png");
     background-size: cover;
@@ -109,6 +113,7 @@ a:hover {
     height: 400px;
   }
 
+    /* Ad's Section Styling */ 
   .heading {
     display: flex;
     flex-direction: row;
@@ -145,8 +150,8 @@ a:hover {
   }
 
   .card {
-    margin: 20px;
     flex: 0 1 300px;
+    width: 80%;
     border: 7px double var(--dark);
     border-radius: 10px;
     background-color: var(--light);
