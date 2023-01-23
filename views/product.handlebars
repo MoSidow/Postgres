@@ -1,12 +1,12 @@
 <div class="card">
-    <h2 >{{name}}</h2>
-    <img src={{image}}></img>
-    <p>{{description}}</p>
-        <p>
+    <h2 class="product-title">{{name}}</h2>
+    <img class="product-image" src={{image}}></img>
+    <p class="description">{{description}}</p>
+        <p class="price">
         <span>£{{price}}</span>
     </p>
-    <p>New product added by {{user.name}}</p>
-    <p>
+    <p class="created-by">New product added by {{user.name}}</p>
+    <p class="review">
         <a href="/review">Click to review the product</a>
     </p>
 </div>

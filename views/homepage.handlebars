@@ -1,18 +1,20 @@
 
 {{#each products as |product|}}
-<div class="row mb-4 product">
-  <div class="col-md-5">
+<div class="card">
+  <div>
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <a href="/product/{{product.id}}">{{product.name}}</a>
+      <a class="product-title" href="/product/{{product.id}}">{{product.name}}</a>
     </h2>
-    <img src={{product.image}}></img>
-    <p>
+    </div>
+    <div class="inner-card">
+    <img class="product-image" src={{product.image}}></img>
+    <p class="price">
       <span class="dollar-amount">£{{format_amount product.price}}</span>
     </p>
-    <p>Created by {{product.user.name}} on {{format_date product.date_created}}</p>
+    <p class="created-by">Created by {{product.user.name}} on {{format_date product.date_created}}</p>
   </div>
-  <div class="col-md-7">
+  <div class="description">
     <p>
       {{product.description}}
     </p>
