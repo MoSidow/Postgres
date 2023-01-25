@@ -78,7 +78,12 @@ You and your group will use everything you’ve learned over the past six weeks 
 
 * Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-![shows completed working Platinum Preloved website](./assets/images/screenshot.png)
+## Screenshots
+
+![shows completed working Platinum Preloved website](./public/assets/images/screenshot1.png)
+![shows completed working Platinum Preloved website](./public/assets/images/screenshot2.png)
+![shows completed working Platinum Preloved website](./public/assets/images/screenshot3.png)
+![shows completed working Platinum Preloved website](./public/assets/images/screenshot4.png)
 
 ## Deployed link
 https://platinum-pre-loved.herokuapp.com/
