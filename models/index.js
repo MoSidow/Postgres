@@ -3,6 +3,7 @@ const Product = require('./Product');
 const Category = require('./Category');
 const Review = require('./Review');
 
+
 User.hasMany(Product, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
