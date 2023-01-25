@@ -8,7 +8,7 @@
         </div>
 
         <div>
-            <label for="review-rating">Rating: </label>
+            <label for="review-rating">Rating 1-5: </label>
             <input type="form-input" type="number" id="review-rating"/>
         </div>
 
@@ -22,5 +22,19 @@
         </div>
     </form>
 </div>
+
+
+{{#if review.length}}
+    <h3 class="logo-2 align">Your Reviews:</h3>
+    {{#each review as |review|}}
+      <div class="card">
+        <h2 class="logo-2 align">{{review.name}}</a></h2>
+        <h4 class="align">{{review.comment}}</a></h4>
+        <h4 class="align">{{review.rating}}</a></h4>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
 
 <script src="./js/review.js"></script>
