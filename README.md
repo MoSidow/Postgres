@@ -81,3 +81,4 @@ You and your group will use everything you’ve learned over the past six weeks 
 ![shows completed working Platinum Preloved website](./assets/images/screenshot.png)
 
 ## Deployed link
+https://platinum-pre-loved.herokuapp.com/
